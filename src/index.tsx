@@ -11,16 +11,16 @@ const LINKING_ERROR =
   '- You rebuilt the app after installing the package\n' +
   '- You are not using Expo Go\n';
 
-type WebviewIosProps = {
-  color: string;
+type WebViewProps = {
+  url: string;
   style: ViewStyle;
 };
 
-const ComponentName = 'WebviewIosView';
+const ComponentName = 'WebView';
 
-export const WebviewIosView =
+export const WebView =
   UIManager.getViewManagerConfig(ComponentName) != null
-    ? requireNativeComponent<WebviewIosProps>(ComponentName)
+    ? requireNativeComponent<WebViewProps>(ComponentName)
     : () => {
         throw new Error(LINKING_ERROR);
       };

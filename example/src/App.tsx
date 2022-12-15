@@ -1,12 +1,12 @@
 import * as React from 'react';
-
-import { StyleSheet, View } from 'react-native';
-import { WebviewIosView } from 'react-native-webview-ios';
+import { Dimensions, StyleSheet, Text, View } from 'react-native';
+import { WebView } from 'react-native-webview-ios';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <WebviewIosView color="#32a852" style={styles.box} />
+      <Text>WebView</Text>
+      <WebView style={styles.box} url="https://www.youtube.com/" />
     </View>
   );
 }
@@ -18,8 +18,8 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   box: {
-    width: 60,
-    height: 60,
+    width: Dimensions.get('window').width,
+    height: 700,
     marginVertical: 20,
   },
 });
