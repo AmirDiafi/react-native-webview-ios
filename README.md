@@ -11,11 +11,11 @@ npm install react-native-webview-ios
 ## Usage
 
 ```js
-import { WebviewIosView } from 'react-native-webview-ios';
+import { WebView } from 'react-native-webview-ios';
 
 // ...
 
-<WebviewIosView url="https://open.spotify.com" />;
+<WebView url="https://open.spotify.com" />;
 ```
 
 ## Contributing
